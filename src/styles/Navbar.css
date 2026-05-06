@@ -1,0 +1,124 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--nav-background);
+  backdrop-filter: blur(16px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-container {
+  width: min(1120px, calc(100% - 40px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  border: 0;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.nav-links,
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links button,
+.footer-links button {
+  border: 0;
+  background: transparent;
+  color: var(--muted-text);
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links button:hover,
+.footer-links button:hover {
+  color: #4caf50;
+  transform: translateY(-1px);
+}
+
+.login-button {
+  padding: 10px 20px;
+}
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+.theme-toggle {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  background: var(--card-background);
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(8deg) scale(1.04);
+}
+
+.theme-icon-placeholder {
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+}
+
+.theme-toggle span {
+  position: relative;
+  z-index: 1;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 720px) {
+  .nav-container {
+    width: min(100% - 28px, 1120px);
+    min-height: auto;
+    padding: 16px 0;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .login-button {
+    padding: 9px 16px;
+  }
+
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+}

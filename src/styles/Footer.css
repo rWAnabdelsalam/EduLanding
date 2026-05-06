@@ -1,0 +1,125 @@
+.footer {
+    border-top: 1px solid var(--card-border);
+    background: var(--card-background);
+    transition:
+            background-color 0.3s ease,
+            border-color 0.3s ease;
+}
+
+.footer-container {
+    width: min(1120px, calc(100% - 40px));
+    min-height: 92px;
+    margin: 0 auto;
+    padding: 28px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    color: var(--muted-text);
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.footer-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--muted-text);
+    text-decoration: none;
+    font-size: 15px;
+    transition:
+            color 0.25s ease,
+            transform 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: #4caf50;
+    transform: translateY(-2px);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: 1px solid var(--card-border);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    transition:
+            transform 0.25s ease,
+            background-color 0.25s ease,
+            border-color 0.25s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+@media (max-width: 640px) {
+    .footer-container {
+        width: min(100% - 28px, 1120px);
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-contact,
+    .footer-links,
+    .footer-socials {
+        align-items: center;
+        justify-content: center;
+    }
+}
